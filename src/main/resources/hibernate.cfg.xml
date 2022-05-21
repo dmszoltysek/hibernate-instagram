@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" 
+"http://hibernate.sourceforge.net/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="show_sql">false</property>
+		<property name="format_sql">true</property>
+		<property name="dialect">org.sqlite.hibernate.dialect.SQLiteDialect</property>
+		<property name="connection.driver_class">org.sqlite.JDBC</property>
+		<property name="connection.url">jdbc:sqlite:instagram.db</property>
+		<property name="connection.username"></property>
+		<property name="connection.password"></property>
+	
+		<!-- tu wstaw mapowania: <mapping class="pl.edu.agh.mwo.hibernate.NazwaKlasy"/> -->
+		<mapping class="pl.edu.agh.mwo.hibernate.Album" />
+		<mapping class="pl.edu.agh.mwo.hibernate.Photo" />
+		<mapping class="pl.edu.agh.mwo.hibernate.User" />
+	</session-factory>
+</hibernate-configuration>
